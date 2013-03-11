@@ -1,0 +1,194 @@
+/*BOILERPLATE*/
+
+.clear {
+	clear: both;
+	}
+
+body {
+
+	font-family: "Futura", "cool-font", arial, sans-serif;
+}	
+
+#wrapper {
+
+	position: relative;
+	width: 940px;
+	height: 628px;
+	overflow: hidden;
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.tile {
+
+	z-index: 1;
+	position: absolute;
+}
+
+#tile1 {
+
+	position: relative;
+	width: 940px;
+	height: 628px;
+	background: black
+}
+
+/*TAB 1*/
+
+#background {
+
+	position: absolute;
+}
+
+.leftalign {
+
+	left: 0px
+}
+
+.rightalign {
+
+	right: 0px
+}
+
+.botleftalign {
+
+	left: 0px;
+	bottom: 0px;
+}
+
+.botrightalign {
+
+	right: 0px;
+	bottom: 0px;
+}
+
+
+#topleft {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	height: 314px;
+	width: 470px;
+	background: rgba(0,0,255,0.1) ; /*blue*/
+}
+
+
+#topright {
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+	height: 314px;
+	width: 470px;
+	background: rgba(0,255,0,0.1);
+	display: none
+}
+
+
+#bottomleft {
+
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+	height: 314px;
+	width: 470px;
+	background: rgba(255,0,0,0.1); 
+	display: none
+}
+
+#bottomright {
+
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	right: 0px;
+	z-index: 1;
+	height: 314px;
+	width: 470px;
+	background: rgba(0,0,0,0.3); 
+	display: none
+}
+
+.pubname, #princess {
+
+	margin-top: 100px;
+	margin-left: 200px;
+	padding: 10px;
+	background: black;
+	color: white;
+	width: 100px
+}
+
+
+/*VIDEOS*/
+
+#videostuff {
+
+	display: none
+}
+#videohead {
+
+	padding: 5px;
+	position: absolute;
+	top: 30px;
+	margin-left: 300px;
+	text-align: center;
+	font-size: 40px;
+	display: none;
+	z-index: 2
+}
+
+#videohead p {
+
+	color: black;
+	background: white;
+}
+
+#videoholder {
+
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	width: 700px;
+	height: 450px;
+	background: pink;
+	display: none;
+	z-index: 2
+}
+
+#close1, #close2, #close3, #close4, #close5 {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background: black;
+	color: white;
+	display: none;
+	z-index: 2
+}
+
+
+
+#thegame {
+
+	position: absolute;
+	font-size: 40px;
+	left: 360px;
+	top: 290px;
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
