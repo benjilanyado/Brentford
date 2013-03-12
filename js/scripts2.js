@@ -64,14 +64,15 @@ function processPlaceClick(place) {
 
     console.log("fading a place");
 
-    $('.pubname').fadeOut(function(){
+        $('.pubname').fadeOut(place.fadeDelay);
+        window.setTimeout(function(){
         background.removeClass(place.classesToRemove).addClass(place.classesToAdd);
         background.animate({'height': place.backgroundHeight}, place.fadeDelay, function(event){
-            videohead.html(place.name).fadeIn();
-            videoholder.html("").fadeIn();
-            console.log("place open");
-        });
-    });
+        videohead.html(place.name).fadeIn();
+        videoholder.html("").fadeIn();
+        console.log("place open");
+     }, place.fadeDelay);        
+    }, place.fadeDelay);
 
     var close = $(place.closeSelector);
     close.delay(2500).fadeIn(function(){
@@ -84,7 +85,6 @@ function processPlaceClick(place) {
         if (close.hasClass("open")) {
             $(videoholder).fadeOut();
             $(videohead).fadeOut();
-
             $(background).animate({'height': originalBackgroundHeight}, place.fadeDelay);
 
             $(this).fadeOut(function(){
