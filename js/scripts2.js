@@ -61,13 +61,13 @@ var background,
     videoholder;
  
 function processPlaceClick(place) {
-     event.preventDefault();
-    $('.pubname').fadeOut(function(){
+     
+    $(place.selector).fadeOut(function(){
         background.removeClass(place.classesToRemove).addClass(place.classesToAdd).animate({
             'height': place.backgroundHeight
         }, place.fadeDelay, function(event){
             videohead.html(place.name).fadeIn();
-            videoholder.html("").fadeIn();    
+            videoholder.html('<iframe frameborder="0" marginheight="0" marginwidth="0" style="border:  0;" src="http://static.guim.co.uk/interactivestore/2013/3/7/1362654594510/815048/publish_to_web/_files/iframe.html" width="750" height="560" allowfullscreen="false" mozallowfullscreen="false" webkitallowfullscreen="false" oallowfullscreen="false" msallowfullscreen="false"></iframe>').fadeIn();    
             console.log("place open")        
         });
     });
@@ -109,6 +109,7 @@ $(document).ready(function(){
             return function(){;
                 processPlaceClick(p);
                 e.preventDefault();
+                event.stopPropagation();
             };
         })(place, event));
     }
