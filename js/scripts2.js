@@ -64,14 +64,15 @@ function processPlaceClick(place) {
 
     console.log("fading a place");
 
-        $('.pubname').fadeOut(place.fadeDelay);
-        window.setTimeout(function(){
+    $('.pubname').fadeOut(place.fadeDelay);
+
+    window.setTimeout(function(){
         background.removeClass(place.classesToRemove).addClass(place.classesToAdd);
         background.animate({'height': place.backgroundHeight}, place.fadeDelay, function(event){
-        videohead.html(place.name).fadeIn();
-        videoholder.html("").fadeIn();
-        console.log("place open");
-     }, place.fadeDelay);        
+            videohead.html(place.name).fadeIn();
+            videoholder.html("").fadeIn();
+            console.log("place open");
+        });
     }, place.fadeDelay);
 
     var close = $(place.closeSelector);
