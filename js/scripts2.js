@@ -53,64 +53,65 @@ var places = [
         fadeDelay: 1000
     }
 ];
- 
+
 var originalBackgroundHeight = '628px';
- 
+
 var background,
     videohead,
     videoholder;
- 
+
 function processPlaceClick(place) {
-     event.preventDefault();
+    console.log("fading a place");
+
     $('.pubname').fadeOut(function(){
-        background.removeClass(place.classesToRemove).addClass(place.classesToAdd).animate({
-            'height': place.backgroundHeight
-        }, place.fadeDelay, function(event){
+        background.removeClass(place.classesToRemove).addClass(place.classesToAdd);
+        background.animate({'height': place.backgroundHeight}, place.fadeDelay, function(event){
             videohead.html(place.name).fadeIn();
-            videoholder.html("").fadeIn();    
-            console.log("place open")        
+            videoholder.html("").fadeIn();
+            console.log("place open");
         });
     });
+
     var close = $(place.closeSelector);
     close.delay(2500).fadeIn(function(){
-        close.addClass("open")
+        close.addClass("open");
     });
 
-    close.on('click', function(event){  
-    console.log("close") 
-    event.preventDefault();      
-   if (close.hasClass("open")) {
-       $(videoholder).fadeOut();
-       $(videohead).fadeOut();
+    close.on('click', function(event){
+        console.log("close");
+        event.preventDefault();
+        if (close.hasClass("open")) {
+            $(videoholder).fadeOut();
+            $(videohead).fadeOut();
 
-       $(background).animate({'height': originalBackgroundHeight}, place.fadeDelay); 
+            $(background).animate({'height': originalBackgroundHeight}, place.fadeDelay);
 
-       $(this).fadeOut(function(){
-           $(".pubname").delay(place.fadeDelay).fadeIn(function(){
-               $(place.stuffToShowOnClose).fadeIn()
-           });
-       });
-   } else {
-       return false
-   }
-});
+            $(this).fadeOut(function(){
+                $(".pubname").delay(place.fadeDelay).fadeIn(function(){
+                    $(place.stuffToShowOnClose).fadeIn();
+                });
+            });
+        } else {
+            return false;
+        }
+    });
 }
- 
+
 $(document).ready(function(){
     background = $('#background');
     videohead = $("#videohead");
     videoholder = $("#videoholder");
- 
+
     for (var i in places) {
         var place = places[i];
 
         $(place.selector).on('click', (function(p, e){
-            event.preventDefault()
-            return function(){;
+            event.preventDefault();
+            return function(){
                 processPlaceClick(p);
-                e.preventDefault();
+                e.preventDefault(); // not sure if you need this and the one above too
             };
         })(place, event));
     }
- 
+
 });
