@@ -149,7 +149,7 @@ $(document).ready(function(){
      $("#thegame").css("display", "none")
       $("#oak, #griffin, #newinn, #princess").fadeOut(function(event){
         $("#background").removeClass("botleftalign leftalign rightalign")
-        $("#background").addClass("botrightalign")
+        $("#background").addClass("botrightalign");
         $("img#background").animate({"height": "1256px"}, 1000, function(event){
           $("#videohead").html("<p>THE PRINCESS ROYAL</p>")
           $("#videohead").fadeIn()

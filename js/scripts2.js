@@ -1,4 +1,3 @@
-// so first we define an array of objects to work with
 var places = [
     {
         name: 'The Royal Oak',
@@ -55,18 +54,14 @@ var places = [
     }
 ];
  
-// next we set up some global variables so we don't keep hitting them
 var originalBackgroundHeight = '628px';
  
-// these are empty placeholders for defining when the document is ready
 var background,
     videohead,
     videoholder;
  
-// set up functions to run when stuff gets clicked (keeps domready code clean)
 function processPlaceClick(place) {
  
-    // do stuff with the background
     $('.pubname').fadeOut(function(){
         background.removeClass(place.classesToRemove).addClass(place.classesToAdd).animate({
             'height': place.backgroundHeight
@@ -75,14 +70,12 @@ function processPlaceClick(place) {
             videoholder.html("").fadeIn();
         });
     });
- 
     var close = $(place.closeSelector);
     close.delay(2500).fadeIn(function(){
         close.addClass("open")
     });
 
-    close.on('click', function(){
-       
+    close.on('click', function(){       
     if (close.hasClass("open")) {
         $(videoholder).fadeOut();
         $(videohead).fadeOut();
@@ -91,7 +84,6 @@ function processPlaceClick(place) {
             $(".pubname").delay(place.fadeDelay).fadeIn(function(){
                 $(place.stuffToShowOnClose).fadeIn()
             });
-             // etc
         });
     }
 
@@ -102,17 +94,13 @@ function processPlaceClick(place) {
 }
  
 $(document).ready(function(){
-    // now the DOM is ready, let's assign those (global) variables
     background = $('#background');
     videohead = $("#videohead");
     videoholder = $("#videoholder");
  
-    // loop through each place
     for (var i in places) {
         var place = places[i];
-        // this is a bit complicated: it's called a closure
-        // basically means that inside the loop, "place" is always correct
-        // more here: http://stackoverflow.com/questions/8624057/closure-needed-for-binding-event-handlers-within-a-loop
+
         $(place.selector).on('click', (function(p, e){
             return function(){;
                 processPlaceClick(p);

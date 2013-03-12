@@ -20,11 +20,6 @@ body {
 	margin-top: 5%;
 }
 
-.tile {
-
-	z-index: 1;
-	position: absolute;
-}
 
 #tile1 {
 
@@ -128,10 +123,7 @@ body {
 
 /*VIDEOS*/
 
-#videostuff {
 
-	display: none
-}
 #videohead {
 
 	padding: 5px;
@@ -141,7 +133,6 @@ body {
 	text-align: center;
 	font-size: 40px;
 	display: none;
-	z-index: 2
 }
 
 #videohead p {
@@ -159,7 +150,6 @@ body {
 	height: 450px;
 	background: pink;
 	display: none;
-	z-index: 2
 }
 
 #close1, #close2, #close3, #close4, #close5 {
@@ -169,7 +159,6 @@ body {
 	background: black;
 	color: white;
 	display: none;
-	z-index: 2
 }
 
 
