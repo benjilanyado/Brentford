@@ -64,10 +64,8 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 1;
 	height: 314px;
 	width: 470px;
-	background: rgba(0,0,255,0.1) ; /*blue*/
 }
 
 
@@ -76,10 +74,8 @@ body {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	z-index: 1;
 	height: 314px;
 	width: 470px;
-	background: rgba(0,255,0,0.1);
 	display: none
 }
 
@@ -93,7 +89,6 @@ body {
 	z-index: 1;
 	height: 314px;
 	width: 470px;
-	background: rgba(255,0,0,0.1); 
 	display: none
 }
 
@@ -103,43 +98,73 @@ body {
 	bottom: 0px;
 	right: 0px;
 	right: 0px;
-	z-index: 1;
 	height: 314px;
 	width: 470px;
-	background: rgba(0,0,0,0.3); 
 	display: none
 }
 
-.pubname, #princess {
+.pubname {
 
 	margin-top: 100px;
 	margin-left: 200px;
 	padding: 10px;
 	background: black;
 	color: white;
+}
+
+#oak {
+
+	width: 110px
+}
+
+#griffin {
+
+	width: 80px
+}
+
+#gamecopy {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#newinn {
+
 	width: 100px
+}
+
+#princess {
+
+	width: 130px
 }
 
 
 /*VIDEOS*/
 
+#videowrapper {
 
-#videohead {
+	position: absolute;
+	width: 940px;
+	height: 628px;
+	background: rgba(0,0,0,0.6);
+	display: none
+}
+
+#videoheadholder {
 
 	padding: 5px;
 	position: absolute;
 	top: 30px;
-	margin-left: 300px;
+	width: 100%;
 	text-align: center;
 	font-size: 40px;
 	display: none;
 }
 
-#videohead p {
+#videohead {
 
-	color: black;
-	background: white;
+	color: white
 }
+
 
 #videoholder {
 
@@ -159,6 +184,7 @@ body {
 	background: black;
 	color: white;
 	display: none;
+	z-index: 2
 }
 
 
