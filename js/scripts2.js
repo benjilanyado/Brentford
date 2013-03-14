@@ -116,16 +116,11 @@ $(document).ready(function(){
     videoholder = $("#videoholder");
     videowrapper = $("#videowrapper")
 
-    for (var i in places) {
-        var place = places[i];
-
-        $(place.selector).on('click', (function(p, e){
-            if(e.preventDefault) e.preventDefault();
-            return function(){
-                processPlaceClick(p);
-                e.preventDefault(); // not sure if you need this and the one above too
-           };
-        })(place, event));
-    }
+    $.each(places, function(i, place) {
+        $(place.selector).on('click', function(e){
+            e.preventDefault();
+            processPlaceClick(place);
+        });
+    });
 
 });
