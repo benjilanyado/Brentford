@@ -120,7 +120,7 @@ $(document).ready(function(){
         var place = places[i];
 
         $(place.selector).on('click', (function(p, e){
-            event.preventDefault();
+            e.preventDefault();
             return function(){
                 processPlaceClick(p);
                 e.preventDefault(); // not sure if you need this and the one above too
