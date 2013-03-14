@@ -70,8 +70,6 @@ var background,
 
 function processPlaceClick(place) {
 
-    console.log("fading a place");
-
     $('.pubname').fadeOut(place.fadeDelay);
 
     window.setTimeout(function(){
