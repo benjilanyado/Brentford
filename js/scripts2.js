@@ -41,7 +41,7 @@ var places = [
         backgroundHeight: '1256px',
         classesToRemove: 'botleftalign leftalign botrightalign',
         classesToAdd: 'rightalign',
-        embed: '<iframe src="http://player.vimeo.com/video/61738338?title=0&amp;byline=0&amp;portrait=0" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+        embed: '<iframe src="http://player.vimeo.com/video/61738338" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
         stuffToShowOnClose:'#thegame, .pubname',
         fadeDelay: 1000
     },
