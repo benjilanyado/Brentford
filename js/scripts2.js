@@ -23,7 +23,7 @@ var places = [
     },
 
     {
-        name: 'The Game (click to start/stop)',
+        name: 'The Game',
         selector: '#gamecopy',
         closeSelector: '#close3',
         backgroundHeight: '628px',
